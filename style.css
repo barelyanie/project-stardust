@@ -1,0 +1,1938 @@
+body{
+
+    margin:0;
+
+    background:black;
+
+    color:#00ff009f;
+
+    font-family:Courier New, monospace;
+
+}
+
+#terminal{
+
+    width:70%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+
+    margin:auto;
+
+}
+
+p{
+
+    font-size:28px;
+
+    margin:15px 0;
+
+}
+
+    #acceptButton{
+
+    display:none;
+
+    background:black;
+
+    color:#00ff00a8;
+
+    border:2px solid #00ff00a8;
+
+    padding:15px 40px;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    margin-top:40px;
+
+    transition:.3s;
+
+}
+#acceptButton:hover{
+
+    background:#00ff00;
+
+    color:black;
+
+    box-shadow:0 0 30px #00ff00;
+
+}
+
+button:hover{
+
+    background:#00ff00a8;
+
+    color:black;
+
+}
+
+/* ---------- League Page ---------- */
+
+#league{
+    color: #00ff00a8;
+    background: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Consolas, monospace;
+}
+
+#champions{
+    display: none;
+    gap: 50px;
+    margin: 40px;
+}
+
+.champion-card{
+    border: 2px solid #00ff00a8;
+    box-shadow: 0 0 18px #00ff00a8;
+    transition:.3s;
+
+} 
+.champion-card:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 35px #00ff00a8;
+
+}
+
+#heart{
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+}
+
+#title,
+#story,
+#quote,
+#acceptButton{
+    display: none;
+}
+
+/* ---------- Fade In Animation ---------- */
+
+.fade-in {
+    animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+.champion-card img{
+
+    width:160px;
+
+    height:250px;
+
+    object-fit:cover;
+
+    border-radius:8px;
+
+}
+#heart{
+
+    animation:heartbeat 1s infinite;
+
+}
+@keyframes heartbeat{
+
+0%{
+
+transform:scale(1);
+
+}
+
+25%{
+
+transform:scale(1.2);
+
+}
+
+50%{
+
+transform:scale(1);
+
+}
+
+75%{
+
+transform:scale(1.2);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+/* ---------- JoJo Page ---------- */
+
+#jojo{
+    background:black;
+    color:#d4af37;      /* Gold */
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    font-family:Georgia, serif;
+}
+
+#record,
+#trait1,
+#trait2,
+#trait3,
+#trait4,
+#trait5,
+#hiddenAbility,
+#continueButton{
+    display:none;
+}
+
+/* ===========================
+        JOJO PAGE
+=========================== */
+
+#jojo{
+
+    background:#080808;
+    color:#d4af37;
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    font-family:Georgia, serif;
+
+    padding:40px;
+
+}
+
+#record{
+
+    display:none;
+
+    width:650px;
+
+    max-width:90%;
+
+    border:3px solid #d4af37;
+
+    padding:35px;
+
+    border-radius:15px;
+
+    background:#111;
+
+    box-shadow:0 0 25px rgba(212,175,55,.45);
+
+}
+
+#record h1{
+
+    letter-spacing:4px;
+
+    margin-bottom:20px;
+
+}
+
+#jonathan{
+
+    width:220px;
+
+    border:4px solid #d4af37;
+
+    padding:8px;
+
+    background:white;
+
+    border-radius:8px;
+
+    box-shadow:0 0 20px rgba(212,175,55,.5);
+
+}
+
+
+#traits{
+
+    margin-top:30px;
+
+    text-align:left;
+
+    width:80%;
+
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+#traits p{
+
+    display:none;
+
+    font-size:22px;
+
+    margin:12px 0;
+
+}
+
+#hiddenAbility{
+
+    display:none;
+
+    margin-top:35px;
+
+    border:2px solid #d4af37;
+
+    padding:20px;
+
+    border-radius:10px;
+
+    box-shadow:0 0 18px rgba(212,175,55,.3);
+
+}
+
+#continueButton{
+
+    display:none;
+
+    margin-top:35px;
+
+    background:#111;
+
+    color:#d4af37;
+
+    border:2px solid #d4af37;
+
+    padding:14px 35px;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#line1,
+#line2,
+#line3{
+
+    font-size:24px;
+
+    margin:10px;
+
+    color:white;
+
+}
+
+#continueArrow{
+
+    display:none;
+
+    width:420px;
+
+    margin-top:40px;
+
+    cursor:pointer;
+
+}
+/* ==========================
+      MEMORY PAGE
+========================== */
+
+#memoryPage{
+
+    background:#f8f6ef;
+
+    min-height:100vh;
+
+    padding:50px;
+
+    text-align:center;
+
+    font-family:Georgia, serif;
+
+}
+
+#memoryTitle{
+
+    color:#2f6b3d;
+
+    margin-bottom:10px;
+
+}
+
+#memoryPage h1{
+
+    color:#2f6b3d;
+
+    margin-bottom:10px;
+
+}
+
+#subtitle{
+
+    color:#555;
+
+    margin-bottom:50px;
+
+    font-size:20px;
+
+}
+
+#memoryBoard{
+
+    position:relative;
+
+    width:850px;
+
+    max-width:95%;
+
+    height:600px;
+
+    margin:30px auto;
+
+}
+
+.memoryItem{
+
+    width:80px;
+
+    position:absolute;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    border-radius:12px; 
+
+}
+
+.memoryItem:hover{
+
+    transform:scale(1.15) rotate(8deg);
+
+    filter:drop-shadow(0 0 12px rgba(255,215,0,.8)); 
+
+}
+
+#star{
+    top:20px;
+    left:380px;
+}
+
+#greenHeart{
+    top:80px;
+    left:560px;
+}
+
+#batman{
+    top:100px;
+    left:120px;
+}
+
+#gurren{
+    top:250px;
+    left:50px;
+}
+
+#cucumber{
+    top:400px;
+    left:150px;
+}
+
+#greninja{
+    top:470px;
+    left:350px;
+}
+
+#pokeBall{
+    top:420px;
+    left:570px;
+}
+
+#loveBall{
+    top:300px;
+    left:460px;
+}
+
+#spiderman{
+    top:400px;
+    left:680px;
+}
+
+#ampharos{
+    top:270px;
+    left:220px;
+}
+
+#mel{
+    top:40px;
+    left:680px;
+}
+
+#xayah{
+    top:500px;
+    left:490px;
+}
+
+#rakan{
+    top:560px;
+    left:210px;
+}
+
+/* ======================
+        POPUP
+====================== */
+
+#popup{
+
+    display:none;
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.55);
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:1000;
+
+}
+
+#popupCard{
+
+    width:500px;
+
+    max-width:85%;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 0 40px rgba(0,0,0,.25);
+
+    position:relative;
+
+    animation:pop .35s;
+
+}
+
+#popupTitle{
+
+    color:#2f6b3d;
+
+    margin-bottom:15px;
+
+}
+
+#popupText{
+
+    color:#444;
+
+    line-height:1.8;
+
+    font-size:20px;
+
+}
+
+#closePopup{
+
+    position:absolute;
+
+    right:20px;
+
+    top:15px;
+
+    cursor:pointer;
+
+    font-size:25px;
+
+}
+
+@keyframes pop{
+
+from{
+
+transform:scale(.8);
+
+opacity:0;
+
+}
+
+to{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+.mageText{
+
+    position:fixed;
+
+    color:#8b0000;
+
+    font-family:Georgia, serif;
+
+    font-size:32px;
+
+    font-weight:bold;
+
+    pointer-events:none;
+
+    z-index:2000;
+
+    animation:mageAppear 1.8s ease forwards;
+
+}
+
+@keyframes mageAppear{
+
+    0%{
+        opacity:0;
+        transform:scale(.4) rotate(-10deg);
+    }
+
+    20%{
+        opacity:1;
+        transform:scale(1.2) rotate(5deg);
+    }
+
+    70%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:0;
+        transform:scale(1.5) rotate(-8deg);
+    }
+
+}
+.sparkle{
+
+    position:fixed;
+
+    color:#d4af37;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    pointer-events:none;
+
+    z-index:9999;
+
+    text-shadow:
+        0 0 5px #ffd700,
+        0 0 15px #ffd700;
+
+    animation:sparkleAnimation 1.5s ease-out forwards;
+
+}
+
+@keyframes sparkleAnimation{
+
+    0%{
+        opacity:0;
+        transform:scale(.2) rotate(0deg);
+    }
+
+    25%{
+        opacity:1;
+        transform:scale(1.3) rotate(90deg);
+    }
+
+    70%{
+        opacity:1;
+        transform:scale(1) rotate(180deg);
+    }
+
+    100%{
+        opacity:0;
+        transform:scale(.2) rotate(360deg);
+    }
+
+}
+.heartSparkle{
+
+    position:fixed;
+
+    font-size:24px;
+
+    pointer-events:none;
+
+    z-index:9999;
+
+    animation:heartFloat 1.5s ease-out forwards;
+
+}
+
+@keyframes heartFloat{
+
+    0%{
+
+        opacity:0;
+
+        transform:scale(.3) translateY(0);
+
+    }
+
+    25%{
+
+        opacity:1;
+
+        transform:scale(1.2) translateY(-10px);
+
+    }
+
+    70%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:scale(.7) translateY(-70px);
+
+    }
+
+}
+.cucumberRain{
+
+    position:fixed;
+
+    top:-50px;
+
+    font-size:30px;
+
+    pointer-events:none;
+
+    z-index:9999;
+
+    animation:cucumberFall 1.8s linear forwards;
+
+}
+
+@keyframes cucumberFall{
+
+    0%{
+
+        opacity:0;
+
+        transform:translateY(0) rotate(0deg);
+
+    }
+
+    15%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:translateY(110vh) rotate(360deg);
+
+    }
+
+}
+.confetti{
+
+    position:fixed;
+
+    width:10px;
+    height:14px;
+
+    z-index:9999;
+
+    pointer-events:none;
+
+    animation:confettiBurst 1.5s ease-out forwards;
+
+}
+
+@keyframes confettiBurst{
+
+    0%{
+
+        opacity:1;
+
+        transform:
+            translate(0,0)
+            rotate(0deg);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:
+            translate(var(--x),var(--y))
+            rotate(720deg);
+
+    }
+
+}
+.webEffect{
+
+    position:fixed;
+
+    top:50%;
+    left:50%;
+
+    font-size:120px;
+
+    z-index:9999;
+
+    pointer-events:none;
+
+    animation:webShoot 1.2s ease-out forwards;
+
+}
+
+@keyframes webShoot{
+
+    0%{
+
+        opacity:0;
+
+        transform:translate(-50%,-50%) scale(.2);
+
+    }
+
+    30%{
+
+        opacity:1;
+
+        transform:translate(-50%,-50%) scale(1);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:translate(-50%,-50%) scale(3);
+
+    }
+
+}
+.gurrenOverlay{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:#080808;
+
+    z-index:10000;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    animation:gurrenFade 4s ease forwards;
+
+}
+
+.gurrenQuote{
+
+    color:#ffffff;
+
+    font-family:Georgia, serif;
+
+    animation:gurrenZoom 4s ease forwards;
+
+}
+
+.gurrenTitle{
+
+    font-size:22px;
+
+    letter-spacing:5px;
+
+    margin-bottom:40px;
+
+}
+
+.gurrenText{
+
+    font-size:48px;
+
+    font-weight:bold;
+
+    line-height:1.4;
+
+    text-shadow:
+        0 0 10px #ffffff,
+        0 0 25px #ffffff;
+
+}
+
+.gurrenBirthday{
+
+    margin-top:40px;
+
+    font-size:24px;
+
+    letter-spacing:2px;
+
+}
+
+@keyframes gurrenFade{
+
+    0%{
+        opacity:0;
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    75%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:0;
+    }
+
+}
+
+@keyframes gurrenZoom{
+
+    0%{
+
+        opacity:0;
+
+        transform:scale(.7);
+
+    }
+
+    20%{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+    70%{
+
+        opacity:1;
+
+        transform:scale(1.05);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:scale(1.1);
+
+    }
+
+}
+@keyframes gurrenZoom{
+
+
+}
+
+/* FINAL MEMORY BUTTON */
+
+#finalButton{
+
+    margin-top:30px;
+
+    padding:14px 35px;
+
+    background:transparent;
+
+    color:#2f6b3d;
+
+    border:2px solid #2f6b3d;
+
+    border-radius:30px;
+
+    font-family:Georgia, serif;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    opacity:0;
+
+    animation:finalButtonAppear 1.5s ease forwards;
+
+    animation-delay:1s;
+
+    transition:.3s;
+
+}
+
+#finalButton:hover{
+
+    background:#2f6b3d;
+
+    color:white;
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 20px rgba(47,107,61,.3);
+
+}
+
+@keyframes finalButtonAppear{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================
+        BIRTHDAY PAGE
+========================== */
+
+#birthdayPage {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: #fffaf2;
+    color: #2f6b3d;
+    font-family: Georgia, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+}
+
+.birthday-container {
+    width: 90%;
+    max-width: 750px;
+    padding: 50px 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.birthday-small {
+    font-size: 18px;
+    color: #777;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.birthday-title {
+    font-size: 64px;
+    color: #2f6b3d;
+    margin: 10px 0;
+    text-shadow: 2px 2px 0 #e8f1e8;
+}
+
+.birthday-name {
+    font-size: 32px;
+    color: #555;
+    margin-bottom: 35px;
+}
+
+.birthday-card {
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 8px 35px rgba(47, 107, 61, .15);
+    border: 2px solid #e5eee5;
+}
+
+.birthday-card p {
+    font-size: 20px;
+    color: #444;
+    line-height: 1.8;
+    margin: 18px 0;
+}
+
+.birthday-heart {
+    font-size: 45px;
+    animation: birthdayHeartbeat 1.5s infinite;
+}
+
+@keyframes birthdayHeartbeat {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+.birthday-button {
+    margin-top: 35px;
+    padding: 15px 38px;
+    background: #2f6b3d;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.birthday-button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px rgba(47, 107, 61, .35);
+}
+
+/* Birthday Decorations */
+
+.birthday-decoration {
+    position: absolute;
+    font-size: 35px;
+    pointer-events: none;
+    animation: birthdayFloat 4s ease-in-out infinite;
+}
+
+.decoration-one {
+    top: 8%;
+    left: 10%;
+}
+
+.decoration-two {
+    top: 15%;
+    right: 12%;
+    animation-delay: 1s;
+}
+
+.decoration-three {
+    bottom: 12%;
+    left: 15%;
+    animation-delay: 2s;
+}
+
+.decoration-four {
+    bottom: 10%;
+    right: 13%;
+    animation-delay: 1.5s;
+}
+
+@keyframes birthdayFloat {
+
+    0%, 100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(5deg);
+    }
+}
+
+/* ==========================
+   BIRTHDAY PAGE ENHANCEMENTS
+========================== */
+
+.birthday-container {
+    animation: birthdayEntrance 1.3s ease forwards;
+}
+
+@keyframes birthdayEntrance {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Cake */
+
+.birthday-cake {
+    font-size: 70px;
+    margin-bottom: 5px;
+    animation: cakeBounce 2s ease-in-out infinite;
+}
+
+@keyframes cakeBounce {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.cake-candle {
+    font-size: 28px;
+    margin-bottom: -25px;
+}
+
+
+/* Birthday heading */
+
+.birthday-title {
+    font-size: 64px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    animation: titleGlow 2s ease-in-out infinite;
+}
+
+@keyframes titleGlow {
+
+    0%, 100% {
+        text-shadow: 2px 2px 0 #e8f1e8;
+    }
+
+    50% {
+        text-shadow:
+            0 0 10px rgba(47, 107, 61, .25),
+            2px 2px 0 #e8f1e8;
+    }
+}
+
+
+/* Name */
+
+.birthday-name {
+    letter-spacing: 1px;
+}
+
+
+/* Birthday card */
+
+.birthday-card {
+    animation: cardAppear 1.5s ease forwards;
+    animation-delay: .3s;
+    opacity: 0;
+}
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.birthday-opening {
+    font-size: 26px !important;
+    font-weight: bold;
+    color: #2f6b3d !important;
+}
+
+.birthday-highlight {
+    font-size: 23px !important;
+    font-weight: bold;
+    color: #2f6b3d !important;
+}
+
+.birthday-final-line {
+    font-size: 22px !important;
+    font-weight: bold;
+}
+
+.birthday-divider {
+    margin: 25px 0;
+    color: #d4af37;
+    font-size: 20px;
+}
+
+.card-stars {
+    color: #d4af37;
+    font-size: 18px;
+    letter-spacing: 8px;
+}
+
+.big-heart {
+    font-size: 50px;
+    margin: 15px 0;
+    animation: birthdayHeartbeat 1.5s infinite;
+}
+
+
+/* More floating decorations */
+
+.decoration-five {
+    top: 35%;
+    left: 5%;
+    animation-delay: .5s;
+}
+
+.decoration-six {
+    bottom: 35%;
+    right: 5%;
+    animation-delay: 2.5s;
+}
+
+
+/* Confetti */
+
+.confetti-piece {
+    position: absolute;
+    width: 8px;
+    height: 18px;
+    border-radius: 3px;
+    opacity: .7;
+    animation: confettiFloat 4s ease-in-out infinite;
+}
+
+.confetti-one {
+    top: 12%;
+    left: 25%;
+    background: #2f6b3d;
+}
+
+.confetti-two {
+    top: 20%;
+    right: 25%;
+    background: #d4af37;
+    animation-delay: 1s;
+}
+
+.confetti-three {
+    bottom: 20%;
+    left: 25%;
+    background: #e89aa5;
+    animation-delay: 2s;
+}
+
+.confetti-four {
+    bottom: 15%;
+    right: 25%;
+    background: #2f6b3d;
+    animation-delay: 1.5s;
+}
+
+.confetti-five {
+    top: 45%;
+    left: 8%;
+    background: #d4af37;
+    animation-delay: 2.5s;
+}
+
+.confetti-six {
+    top: 40%;
+    right: 8%;
+    background: #e89aa5;
+    animation-delay: .7s;
+}
+
+@keyframes confettiFloat {
+
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .birthday-container {
+        width: 88%;
+        padding: 35px 10px;
+    }
+
+    .birthday-title {
+        font-size: 44px;
+    }
+
+    .birthday-name {
+        font-size: 24px;
+    }
+
+    .birthday-card {
+        padding: 25px 20px;
+    }
+
+    .birthday-card p {
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+    .birthday-opening {
+        font-size: 22px !important;
+    }
+
+    .birthday-highlight {
+        font-size: 20px !important;
+    }
+
+    .birthday-cake {
+        font-size: 55px;
+    }
+
+    .birthday-decoration {
+        font-size: 25px;
+    }
+
+}
+/* ==========================
+       FINAL BIRTHDAY REVEAL
+========================== */
+
+.finalReveal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 250, 242, .96);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    animation: finalRevealFade .8s ease forwards;
+}
+
+.finalRevealCard {
+    width: 80%;
+    max-width: 600px;
+    padding: 45px 30px;
+    background: white;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 10px 50px rgba(47, 107, 61, .2);
+    animation: finalCardAppear 1s ease forwards;
+}
+
+.finalRevealCard h2 {
+    color: #2f6b3d;
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.finalRevealCard p {
+    color: #444;
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+.finalSparkles {
+    color: #d4af37;
+    font-size: 22px;
+    letter-spacing: 8px;
+}
+
+.finalHeart {
+    font-size: 55px;
+    margin-top: 20px;
+    animation: birthdayHeartbeat 1.5s infinite;
+}
+
+@keyframes finalRevealFade {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes finalCardAppear {
+
+    from {
+        opacity: 0;
+        transform: scale(.8) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* ==========================
+       FINAL STORY SCENE
+========================== */
+
+.birthdayFinalScene {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 20000;
+    background: #b8d98f;
+}
+
+
+/* Background image */
+
+.finalSceneBackground {
+    position: absolute;
+    inset: 0;
+
+    background-image: url("images/final-scene.jpg");
+    background-size: cover;
+    background-position: center;
+
+    transform: scale(1);
+
+    animation: sceneZoom 20s ease-out forwards;
+}
+
+
+/* Soft overlay */
+
+.birthdayFinalScene::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: rgba(255, 255, 255, .12);
+
+    pointer-events: none;
+}
+
+
+/* Story */
+
+.finalStory {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    z-index: 2;
+
+    padding: 30px;
+}
+
+
+/* Story lines */
+
+.storyLine {
+    position: absolute;
+
+    max-width: 700px;
+
+    color: white;
+
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+    line-height: 1.5;
+
+    text-shadow:
+        0 2px 5px rgba(0, 0, 0, .45),
+        0 0 15px rgba(0, 0, 0, .25);
+
+    opacity: 0;
+}
+
+
+/* Each line appears separately */
+
+.lineOne {
+    animation: storyLineOne 4s ease forwards;
+}
+
+.lineTwo {
+    animation: storyLineTwo 4s ease forwards;
+    animation-delay: 4s;
+}
+
+.lineThree {
+    animation: storyLineThree 4s ease forwards;
+    animation-delay: 8s;
+}
+
+.lineFour {
+    font-size: 38px;
+    font-weight: bold;
+
+    animation: storyLineFour 5s ease forwards;
+    animation-delay: 12s;
+}
+
+
+/* Background entrance */
+
+@keyframes finalSceneAppear {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Gentle camera movement */
+
+@keyframes sceneZoom {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.03);
+    }
+}
+
+
+/* Story timing */
+
+@keyframes storyLineOne {
+
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes storyLineTwo {
+
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes storyLineThree {
+
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes storyLineFour {
+
+    0% {
+        opacity: 0;
+        transform: scale(.95);
+    }
+
+    20% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    70% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.03);
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .storyLine {
+        font-size: 22px;
+        padding: 20px;
+    }
+
+    .lineFour {
+        font-size: 29px;
+    }
+
+}
+
+@keyframes finalRevealExit {
+
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+/* ==========================
+   MOBILE LEAGUE PAGE
+========================== */
+
+@media (max-width: 600px) {
+
+    #league {
+        padding: 30px 15px;
+        box-sizing: border-box;
+        min-height: 100vh;
+    }
+
+    #champions {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+        width: 100%;
+        margin: 25px 0;
+        box-sizing: border-box;
+    }
+
+    .champion-card {
+        max-width: 42vw;
+        box-sizing: border-box;
+    }
+
+    .champion-card img {
+        width: 120px;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* ==========================
+   MOBILE MEMORY COLLECTION
+========================== */
+
+@media (max-width: 600px) {
+
+    #memoryPage {
+        padding: 30px 10px;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+
+    #memoryBoard {
+        position: relative;
+        width: 100%;
+        max-width: 390px;
+        height: 620px;
+        margin: 30px auto 20px;
+    }
+
+    .memoryItem {
+        width: 60px;
+        height: auto;
+    }
+
+
+    /* ⭐ Star */
+    #star {
+        top: 10px;
+        left: 43%;
+    }
+
+    /* 💚 Green Heart */
+    #greenHeart {
+        top: 70px;
+        left: 73%;
+    }
+
+    /* 🦇 Batman */
+    #batman {
+        top: 90px;
+        left: 12%;
+    }
+
+    /* 🌌 Gurren */
+    #gurren {
+        top: 190px;
+        left: 4%;
+    }
+
+    /* 🥒 Cucumber */
+    #cucumber {
+        top: 300px;
+        left: 18%;
+    }
+
+    /* 🐸 Greninja */
+    #greninja {
+        top: 390px;
+        left: 43%;
+    }
+
+    /* ⚪ Poké Ball */
+    #pokeBall {
+        top: 275px;
+        left: 72%;
+    }
+
+    /* ❤️ Love Ball */
+    #loveBall {
+        top: 180px;
+        left: 55%;
+    }
+
+    /* 🕷️ Spider-Man */
+    #spiderman {
+        top: 350px;
+        left: 78%;
+    }
+
+    /* ⚡ Ampharos */
+    #ampharos {
+        top: 220px;
+        left: 28%;
+    }
+
+    /* 🟢 Mel */
+    #mel {
+        top: 105px;
+        left: 82%;
+    }
+
+    /* 🪶 Xayah */
+    #xayah {
+        top: 450px;
+        left: 60%;
+    }
+
+    /* 🪶 Rakan */
+    #rakan {
+        top: 510px;
+        left: 18%;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    #continueArrow {
+        width: 320px;
+        max-width: 90%;
+        height: auto;
+    }
+
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday🧁</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body id="birthdayPage">
+
+    <!-- Floating decorations -->
+    <div class="birthday-decoration decoration-one">🎈</div>
+    <div class="birthday-decoration decoration-two">✨</div>
+    <div class="birthday-decoration decoration-three">💚</div>
+    <div class="birthday-decoration decoration-four">🎈</div>
+    <div class="birthday-decoration decoration-five">🎉</div>
+    <div class="birthday-decoration decoration-six">⭐</div>
+
+
+    <div class="birthday-container">
+
+        <div class="birthday-small">
+            ✦ IT'S YOUR BIRTHDAY ✦
+        </div>
+
+
+        <!-- Cake -->
+        <div class="birthday-cake">
+
+            <div class="cake-candle">
+                🕯️
+            </div>
+
+            <div class="cake-top">
+                🎂
+            </div>
+
+        </div>
+
+
+        <h1 class="birthday-title">
+            Happy Birthday!
+        </h1>
+
+
+        <div class="birthday-name">
+            Nathan 💚
+        </div>
+
+
+        <div class="birthday-card">
+
+            <div class="card-stars">
+                ✨ ✦ ✨
+            </div>
+
+            <p class="birthday-opening">
+                Happy Birthday! 🥳
+            </p>
+
+            <p>
+                So... you made it all the way here.
+            </p>
+
+            <p>
+                I wanted to make something a little different
+                for your birthday this year.
+            </p>
+
+            <p>
+                A little collection of things that reminded me
+                of you and some surprises here and
+                there.
+            </p>
+
+            <p>
+                And now that you've seen all of that,
+                I've done all of this just to say...
+            </p>
+
+            <div class="birthday-divider">
+                ✦ ───────── ✦
+            </div>
+
+            <p class="birthday-highlight">
+                I hope you know how special you are.
+            </p>
+
+            <p>
+                I hope this next year brings you new adventures,
+                good memories, plenty of reasons to laugh
+                and everything you're working towards.
+            </p>
+
+            <p>
+                But most importantly...
+            </p>
+
+            <div class="big-heart">
+                💚
+            </div>
+
+            <p class="birthday-final-line">
+                I hope you have the happiest birthday.
+            </p>
+
+            <div class="card-stars">
+                ✨ ✦ ✨
+            </div>
+
+        </div>
+
+
+        <button class="birthday-button" onclick="finishBirthday()">
+            One Last Last Thing 𐔌՞ ܸ.ˬ.ܸ՞𐦯
+        </button>
+
+    </div>
+
+
+    <!-- Confetti -->
+    <div class="confetti-piece confetti-one"></div>
+    <div class="confetti-piece confetti-two"></div>
+    <div class="confetti-piece confetti-three"></div>
+    <div class="confetti-piece confetti-four"></div>
+    <div class="confetti-piece confetti-five"></div>
+    <div class="confetti-piece confetti-six"></div>
+
+
+    <script>
+
+function finishBirthday() {
+
+    const oldReveal = document.querySelector(".finalReveal");
+
+    if (oldReveal) {
+
+        oldReveal.style.animation = "finalRevealExit .6s ease forwards";
+
+        setTimeout(function() {
+
+            oldReveal.remove();
+            showFinalScene();
+
+        }, 600);
+
+    } else {
+
+        showFinalScene();
+
+    }
+
+}
+
+function showFinalScene() {
+
+    const finalScene = document.createElement("div");
+
+    finalScene.className = "birthdayFinalScene";
+
+    finalScene.innerHTML = `
+
+        <div class="finalSceneBackground"></div>
+
+        <div class="finalStory">
+
+            <p class="storyLine lineOne">
+                And that's the end of your little birthday adventure.
+            </p>
+
+            <p class="storyLine lineTwo">
+                I hope you enjoyed it!
+            </p>
+
+            <p class="storyLine lineThree">
+                Here's to another year of you.
+            </p>
+
+            <p class="storyLine lineFour">
+                Happy Birthday, Nathan🧸
+            </p>
+
+        </div>
+
+        <audio id="birthdaySong" preload="auto">
+            <source src="music/put-your-records-on.mp3" type="audio/mpeg">
+        </audio>
+
+    `;
+
+    document.body.appendChild(finalScene);
+
+    const song = document.getElementById("birthdaySong");
+
+    song.volume = 0.65;
+
+    song.play().catch(function(error) {
+        console.log("Music playback was blocked:", error);
+    });
+}
+</script>
+
+</body>
+
+</html>
